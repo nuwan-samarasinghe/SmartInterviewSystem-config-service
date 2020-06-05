@@ -1,0 +1,22 @@
+server:
+  port: 9443
+spring:
+  application:
+    name: configserver
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://bitbucket.org/virtusa-hack/config-store
+          private-key: ---- BEGIN SSH2 PUBLIC KEY ----
+            AAAAB3NzaC1yc2EAAAABJQAAAQEAyZ/L9whSxZLBKx86PmVfpgNYnEkLBor+LmOL
+            6Q+r0a1GthZJfxVTy6PY5EEIs/Mz/L5m+UqQK1FKTY+udLninwlPBQvHvTzEscqI
+            aAQBA80cH0n9uHcfmsqZLB0QYhdh6PGUl6uAdsdL9aSDOOk4eic+Xj2nWs9ZKKdt
+            6h5l8O0cV+KYKhMwNL8aQtAOsG4Ml+GoSLNk6T6ktGy11fCd3oUNoJnskrrqYwvM
+            BOU0zuZ5E+ketKzEls252WivPAMCB2Def0kqlhkjwsQ+4mbs3/eIt1Tpv+0SiMQY
+            MgQbOUJ/+8C9BuPHkHTI3SNCHA6YyYuK2rNr27gtLwzg4A3zSw==
+            ---- END SSH2 PUBLIC KEY ----
+          search-paths: '*service*'
+
