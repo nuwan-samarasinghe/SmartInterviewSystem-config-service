@@ -7,6 +7,6 @@ spring:
         git:
           uri: https://bitbucket.org/virtusa-hack/config-store
           username: nuwansamarasinghe100@gmail.com
-          password: sama@272199360G
+          password: nuw2727888220
           search-paths: '*service*'
 
