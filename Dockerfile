@@ -5,10 +5,12 @@ FROM openjdk:8-jdk-alpine
 EXPOSE 8181
 
 # The application's jar file
-ARG JAR_FILE
+COPY "/target/config-service-0.0.1-SNAPSHOT.jar" "/usr/app/"
+
+WORKDIR "/usr/app"
 
 # Add the application's jar to the container
 ADD ${JAR_FILE} config-service.jar
 
 # Run the jar file
-ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","/config-service.jar"]
+ENTRYPOINT ["java","-Djava.security.egd=file:/dev/./urandom","-jar","config-service-0.0.1-SNAPSHOT.jar"]
